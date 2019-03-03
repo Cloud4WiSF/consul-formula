@@ -4,7 +4,7 @@ consul-config:
   file.serialize:
     - name: /etc/consul.d/config.json
     - formatter: json
-    - dataset: {{ consul.config }}
+    - dataset: {{ consul.config|tojson }}
     - user: {{ consul.user }}
     - group: {{ consul.group }}
     - mode: 0640
